@@ -13,6 +13,6 @@ add_subdirectory(examples)
 add_subdirectory(modules)
 
 if(BUILD_TESTS)
-    add_subdirectory(tests)
+    add_subdirectory(test)
 endif(BUILD_TESTS)
 
