@@ -6,7 +6,7 @@
 int main() {
     ascpp::sprite_loader loader;
     auto sprite = new ascpp::sprite(loader.load("./habr.txt"));
-    ascpp::renderer renderer;
+    ascpp::renderer renderer(17, 90);
     ascpp::game_scene scene;
     scene.add_object(ascpp::game_object(std::shared_ptr<ascpp::sprite>(sprite)));
     renderer.draw(scene);
