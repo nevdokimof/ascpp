@@ -31,4 +31,4 @@ install(FILES ${CMAKE_BINARY_DIR}/modules/core/${PROJECT_NAME}.pc
 
 file(GLOB headers "include/*.h")
 install(FILES ${headers}
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ascp++_core)
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/asc++_core)
