@@ -42,11 +42,9 @@ std::string ascpp::sprite_loader::load_file(const std::filesystem::path &path_to
     std::string file_buffer;
     char char_buffer = 0;
     std::ifstream file_stream(path_to_file);
+    //disable skipping whitechars
+    file_stream.unsetf(std::ios_base::skipws);
     while(file_stream >> char_buffer) {
-        //formatted input of file_stream skips '\n' so we need to handle it manually
-        if(file_stream.peek() == '\n')
-            char_buffer = '\n';
-
         if(check_for_ascii(char_buffer)) {
             file_buffer.push_back(char_buffer);
         }
